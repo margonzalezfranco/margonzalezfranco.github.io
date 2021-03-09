@@ -1,10 +1,10 @@
 +++
-title = "Virtual reality controller"
+title = "Haptic rendering"
 date = "2020-01-01"
-authors = ["Mar Gonzalez Franco", "Eyal Ofek", "Michael J Sinclair", "Christian Holz", "Jaeyeon Lee"]
+authors = ["Mar Gonzalez Franco", "Eyal Ofek", "Michael J Sinclair","Anthony James Steed"]
 publication_types = ["1"]
-publication = "US Patent 10,838,486"
-publication_short = "US Patent 10,838,486"
+publication = "US Patent App. 16/434,792"
+publication_short = "US Patent App. 16/434,792"
 abstract = ""
 abstract_short = ""
 image_preview = ""
