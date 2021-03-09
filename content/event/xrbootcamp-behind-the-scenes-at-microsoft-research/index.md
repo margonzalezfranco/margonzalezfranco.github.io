@@ -19,7 +19,7 @@ all_day: false
 links:
   - url: https://youtu.be/2LBkVyF-fyE
     name: Video
-    icon_pack: ai
+    icon_pack: fab
     icon: youtube
 event: XRBootcamp - Behind the scenes at Microsoft Research
 event_url: https://www.eventbrite.com/e/behind-the-scenes-at-microsoft-research-vr-locomotion-avatars-tickets-137404176591#
