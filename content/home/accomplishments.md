@@ -27,12 +27,12 @@ item:
     organization: 'Mujeres a Seguir'
     title: 'MAS Technology winner 2019'
     url: 'https://www.mujeresaseguir.com/ganadoras'
-	
+
   - date_start: '2021-03-01'
     organization: 'Mujer Hoy'
     title: 'Next Generation of Scientists'
     url: 'https://www.mujerhoy.com/vivir/protagonistas/202103/06/cientificas-espanolas-logros-exito-futuro-nuevas-generaciones-solucion-pandemia-problemas-20210305111632.html'
-    
+
   - date_start: 2019-02-01
     organization: 'Business Insider ES'
     title: 'Business Insider Tech Expert under 35'
