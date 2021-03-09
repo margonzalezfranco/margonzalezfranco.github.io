@@ -24,6 +24,12 @@ image:
   filename: 674b9e6c-2b9a-4f22-9d5d-c4b9931041ca.jpeg
   focal_point: Smart
   preview_only: false
+
+links:
+  - icon: ":speaking_head:"
+    icon_pack: emoji
+    name: Join
+    url: https://www.youtube.com/watch?v=cMTv7V3PpoU
 ---
 Speakers
 
