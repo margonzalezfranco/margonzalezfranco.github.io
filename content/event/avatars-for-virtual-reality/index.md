@@ -1,5 +1,5 @@
 ---
-title: Avatars for Virtual Reality
+title: SXSW - Avatars for Virtual Reality
 abstract: Creating realistic digital humans has become a center piece for the
   take-off VR and AI. Current VR worlds are widely underpopulated, and that
   prevents us from realizing the true potential of this technology. Humans are
