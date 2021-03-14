@@ -15,21 +15,20 @@ location: Austin TX - Virtual
 date: 2021-03-16T15:15:43.741Z
 date_end: 2021-03-16T16:10:00.000Z
 all_day: false
+links:
+  - icon: ":speaking_head:"
+    icon_pack: emoji
+    name: Join
+    url: https://www.youtube.com/watch?v=cMTv7V3PpoU
 event: "SXSW "
 event_url: https://online.sxsw.com/event/sxsw-online/planning/UGxhbm5pbmdfMzM1NTAy
 publishDate: 2021-03-08T00:21:43.755Z
 draft: false
 featured: true
 image:
-  filename: 674b9e6c-2b9a-4f22-9d5d-c4b9931041ca.jpeg
+  filename: ../images/674b9e6c-2b9a-4f22-9d5d-c4b9931041ca.jpeg
   focal_point: Smart
   preview_only: false
-
-links:
-  - icon: ":speaking_head:"
-    icon_pack: emoji
-    name: Join
-    url: https://www.youtube.com/watch?v=cMTv7V3PpoU
 ---
 Speakers
 
