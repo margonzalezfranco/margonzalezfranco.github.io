@@ -1,7 +1,7 @@
 ---
 title: Mar Gonzalez-Franco
 role: Principal Researcher
-avatar_filename: foto.jpeg
+avatar_filename: 125F3C1F-DC67-4A70-BEEE-F067CD293B57.jpeg
 bio: My research interests include distributed robotics, mobile computing and
   programmable matter.
 interests: []
