@@ -152,7 +152,7 @@ hr {
 #featured-talks .row {
     grid-column-gap: 10px;
     grid-row-gap: 10px;
-    padding-bottom: 50px;
+    padding-bottom: 10px;
 }
 .card {
     grid-column: span 3;
@@ -178,7 +178,7 @@ hr {
     width: 100%;
 }
 .cdesc {
-    height: 30px;
+    
     vertical-align: top;
     margin-bottom: 10px;
     font-size: 15px;
