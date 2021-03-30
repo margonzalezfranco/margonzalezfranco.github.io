@@ -152,7 +152,7 @@ hr {
 #featured-talks .row {
     grid-column-gap: 10px;
     grid-row-gap: 10px;
-    padding-bottom: 30px;
+    padding-bottom: 50px;
 }
 .card {
     grid-column: span 3;
