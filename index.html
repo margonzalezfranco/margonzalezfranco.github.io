@@ -5,11 +5,45 @@
 
     
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	
+	
+
     <title>Mar Gonzalez-Franco</title>
     <link rel="stylesheet" type="text/css" href="./MarGonzalez_files/style.css">
   </head>
+  
   <body>
 
+<script>
+function FilterFunction(filter) {
+  // Declare variables
+ 
+	  var input,  p, list;
+	  input = document.getElementById('fullpublications');
+	 
+	  
+	  console.log(filter);
+	  // Loop through all items, and hide those who don't match the search query
+	  list = input.getElementsByClassName("pub")
+	  
+	  for (i = 0; i < list.length; i++) {
+		p = list[i].childNodes[0].nextSibling;
+		//console.log(p.classList);
+		if( p.classList.contains(filter) || filter=='')
+		{
+			//console.log(p);
+			p.style.display = "";
+			p.style.height = "80px";
+		}else {
+			p.style.display = "none";
+			//p.children[2].style.height = "0px";
+			p.style.height = "0px";
+		}
+	}
+		
+		
+}
+</script>
     
     <div id="dhead" class="container">
       <div class="row">
@@ -400,212 +434,441 @@
 	  </div>
 	</div>
 	<div class="project" style="background-color: #fff;">
-    <div class="container">
-      <div class="ctitle"> full list of publications</div>
+    <div class="container" id="fullpublications">
+      <div class="ctitle" onclick="FilterFunction('')" style="cursor: pointer;"> full list of publications</div>
+	  <div class="pico"  onclick="FilterFunction('interaction')" style="cursor: pointer;">interaction</div>
+	  <div class="pico"  onclick="FilterFunction('perception')" style="cursor: pointer;">perception</div>
+	  <div class="pico" onclick="FilterFunction('avatars')" style="cursor: pointer;">avatars</div>
+	  <div class="pico"  onclick="FilterFunction('faces')" style="cursor: pointer;">faces</div>
+	  <div class="pico" onclick="FilterFunction('AR')" style="cursor: pointer;">AR</div>
+	  <div class="pico" onclick="FilterFunction('audio')" style="cursor: pointer;">audio</div>
+	  <div class="pico" onclick="FilterFunction('accessibility')" style="cursor: pointer;">accessibility</div>
+	  <div class="pico" onclick="FilterFunction('haptics')" style="cursor: pointer;">haptics</div>
+	  <div class="pico"  onclick="FilterFunction('devices')" style="cursor: pointer;">devices</div>
+	  <div class="pico" onclick="FilterFunction('review')" style="cursor: pointer;">review</div>
+	  <div class="pico" onclick="FilterFunction('locomotion')" style="cursor: pointer;">locomotion</div>
+	  <div class="pico" onclick="FilterFunction('motorcontrol')" style="cursor: pointer;">motor control</div>
+	  <div class="pico" onclick="FilterFunction('theory')" style="cursor: pointer;">theory</div>
+	  <div class="pico"  onclick="FilterFunction('latency')" style="cursor: pointer;">latency</div>
+	  <div class="pico"  onclick="FilterFunction('EEG')" style="cursor: pointer;">EEG</div>
+	  <div class="pico" onclick="FilterFunction('opensource')" style="cursor: pointer;">open source</div>
+<br/><br/>
+<br/><br/>
+2021
 
-      <div class="pub">
+		<div class="pub">
+		<div class="audio accessibility perception locomotion">
+		<div class="pico" > <img src="./MarGonzalez_files/pubimg/.png"/></div>
+				<div class="pub-title"><a href="">Rethinking GPS Navigation: Creating Cognitive Maps Through Auditory Clues</a></div>
+				<div class="pub-venue">Scientific Reports 2021</div> <a href="./MarGonzalez_files/bibs/.bib"><img src="./MarGonzalez_files/copy-regular.svg"  width="15" height="15"/></a>
+				<div class="pub-authors">Gregory Dane Clemenson, Antonella Maselli, Alex Fiannaca, Amos Miller, <b>Mar Gonzalez-Franco</b> </div> <br/><br/>
+      
+	  </div>
+	 
+	</div>
+      <div class="pub" >
+	  <div class="locomotion review opensource accessibility">
+	  <div class="pico" > <img src="./MarGonzalez_files/pubimg/locomotionVault.png"/></div>
         <div class="pub-title"><a href="https://www.microsoft.com/en-us/research/publication/locomotion-vault-the-extra-mile-in-analyzing-vr-locomotion-techniques/">Locomotion Vault: the Extra Mile in Analyzing VR Locomotion Techniques</a></div>
         <div class="pub-venue">ACM CHI 2021</div>
-        <div class="pub-authors">Massimiliano di Luca, Hasti Seifi, Simon Egan, <b>Mar Gonzalez-Franco</b></div>
+        <div class="pub-authors">Massimiliano di Luca, Hasti Seifi, Simon Egan, <b>Mar Gonzalez-Franco</b></div><br/><br/>
       </div>
+	  </div>
 
       <div class="pub">
+	  <div class="AR">
+	    <div class="pico" > <img src="./MarGonzalez_files/pubimg/creatAR2021.jpg"/></div>
         <div class="pub-title"><a href="https://www.microsoft.com/en-us/research/publication/story-creatar-a-toolkit-for-spatially-adaptive-augmented-reality-storytelling/">Story CreatAR: a Toolkit for Spatially-Adaptive Augmented Reality Storytelling</a></div>
         <div class="pub-venue">IEEE VR 2021</div>
-        <div class="pub-authors">Abbey Singh, Ramanpreet Kaur, Peter Haltner, Matthew Peachey, <b>Mar Gonzalez-Franco</b>, Joseph Malloch, Derek Reilly</div>
+        <div class="pub-authors">Abbey Singh, Ramanpreet Kaur, Peter Haltner, Matthew Peachey, <b>Mar Gonzalez-Franco</b>, Joseph Malloch, Derek Reilly</div><br/><br/>
       </div>
-
-      
-
+	</div>
+	
       <div class="pub">
+		  <div class="avatars theory opensource">
+		  <div class="pico" > <img src="./MarGonzalez_files/pubimg/embodiment2021.jpg"/></div>
+				<div class="pub-title"><a href="https://www.frontiersin.org/articles/10.3389/frvir.2020.575943/full">Avatar Embodiment. A Standardized Questionnaire</a></div>
+				<div class="pub-venue">Frontiers in Virtual Reality 2021</div> <a href="./MarGonzalez_files/bibs/embodiment-questionnaire.bib"><img src="./MarGonzalez_files/copy-regular.svg"  width="15" height="15"/></a> 
+				<div class="pub-authors">Tabitha C. Peck, <b>Mar Gonzalez-Franco</b></div> <br/><br/>
+				
+			</div></div>
+
+2020
+
+		<div class="pub">
+		
+	  <div class="avatars opensource review">
+	  <div class="pico" > <img src="./MarGonzalez_files/pubimg/rocketbox2020.jpg"/></div>
+				<div class="pub-title"><a href="https://www.microsoft.com/en-us/research/publication/the-rocketbox-library-and-the-utility-of-freely-available-rigged-avatars-for-procedural-animation-of-virtual-humans-and-embodiment/">The Rocketbox library and the utility of freely available rigged avatars</a></div>
+				<div class="pub-venue">Frontiers in Virtual Reality 2020</div> <a href="./MarGonzalez_files/bibs/the-rocketbox-library-and-the-utility-of-freely-available-rigged-avatars-for-procedural-animation-of-virtual-humans-and-embodiment.bib"><img src="./MarGonzalez_files/copy-regular.svg"  width="15" height="15"/></a> <a href="https://github.com/microsoft/Microsoft-Rocketbox" target="_blank"><img src="./MarGonzalez_files/github-brands.svg" width="15" height="15"/></a>
+				<div class="pub-authors"><b>Mar Gonzalez-Franco</b>, Eyal Ofek, Ye Pan, Angus Antley, Anthony Steed, Bernhard Spanlang, Antonella Maselli, Domna Banakou, Nuria Pelechano, Sergio Orts-Escolano, Veronica Orvalho, Laura Trutoiu, Markus Wojcik, Maria V. Sanchez-Vives, Jeremy Bailenson, Mel Slater, Jaron Lanier</div> <br/><br/>
+			</div>
+</div>
+			<div class="pub">
+			
+		  <div class="avatars opensource">
+		  <div class="pico" > <img src="./MarGonzalez_files/pubimg/movebox2020.png"/></div>
+				<div class="pub-title"><a href="https://www.microsoft.com/en-us/research/publication/movebox-democratizing-mocap-for-the-microsoft-rocketbox-avatar-library/">MoveBox: Democratizing MoCap for the Microsoft Rocketbox Avatar Library</a></div>
+				<div class="pub-venue">IEEE AIVR 2020</div> <a href="./MarGonzalez_files/bibs/movebox-democratizing-mocap-for-the-microsoft-rocketbox-avatar-library.bib"><img src="./MarGonzalez_files/copy-regular.svg"  width="15" height="15"/></a> <a href="https://github.com/microsoft/MoveBox-for-Microsoft-Rocketbox" target="_blank"><img src="./MarGonzalez_files/github-brands.svg" width="15" height="15"/></a>
+				<div class="pub-authors"><b>Mar Gonzalez-Franco</b>, Zelia Egan, Matthew Peachey, Angus Antley, Tanmay Randhavane, Payod Panda, Yaying Zhang, Derek F Reilly, Tabitha Peck, Andrea Stevenson Won, Cheng Yao Wang, Anthony Steed, Eyal Ofek</div> <br/><br/>
+			</div></div>
+			
+			
+      <div class="pub">
+	  <div class="avatars motorcontrol">
+	  <div class="pico" > <img src="./MarGonzalez_files/pubimg/snapmoves2020.jpg"/></div>
         <div class="pub-title"><a href="https://www.microsoft.com/en-us/research/publication/snapmove-movement-projection-mapping-in-virtual-reality/">SnapMove: Movement Projection Mapping in Virtual Reality</a></div>
         <div class="pub-venue">IEEE AIVR 2020</div>
-        <div class="pub-authors">Brian Cohn, Antonella Maselli, Eyal Ofek, <b>Mar Gonzalez-Franco</b></div>
+        <div class="pub-authors">Brian Cohn, Antonella Maselli, Eyal Ofek, <b>Mar Gonzalez-Franco</b></div><br/><br/>
       </div>
+	  </div>
 
       <div class="pub">
+	  <div class="haptics theory perception">
+	  <div class="pico" > <img src="./MarGonzalez_files/pubimg/asymmetry2020.png"/></div>
         <div class="pub-title"><a href="https://www.microsoft.com/en-us/research/publication/asymmetry-of-grasp-in-haptic-perception/">Asymmetry of Grasp in Haptic Perception</a></div>
         <div class="pub-venue">ACM Symposium on Applied Perception 2020 (SAP '20)</div>
-        <div class="pub-authors"><b>Mar Gonzalez-Franco</b>, Mike Sinclair, Eyal Ofek</div>
+        <div class="pub-authors"><b>Mar Gonzalez-Franco</b>, Mike Sinclair, Eyal Ofek</div><br/><br/>
       </div>
+	  </div>
 
       <div class="pub">
+	  <div class="avatars motorcontrol perception faces">
+	  <div class="pico" > <img src="./MarGonzalez_files/pubimg/iddle2020.jpg"/></div>
         <div class="pub-title"><a href="https://www.microsoft.com/en-us/research/publication/using-facial-animation-to-increase-the-enfacement-illusion-and-avatar-self-identification/">Using Facial Animation to Increase the Enfacement Illusion and Avatar Self-Identification</a></div>
         <div class="pub-venue">IEEE Transactions on Visualization and Computer Graphics 2020</div>
-        <div class="pub-authors"><b>Mar Gonzalez-Franco</b>, Anthony Steed, Steve Hoogendyk, Eyal Ofek</div>
+        <div class="pub-authors"><b>Mar Gonzalez-Franco</b>, Anthony Steed, Steve Hoogendyk, Eyal Ofek</div><br/><br/>
       </div>
+	  </div>
 
       <div class="pub">
+
+		<div class="latency AR perception">	 
+		<div class="pico" > <img src="./MarGonzalez_files/pubimg/latency2020.jpg"/></div>
         <div class="pub-title"><a href="https://www.microsoft.com/en-us/research/publication/measuring-system-visual-latency-through-cognitive-latency-on-video-see-through-ar-devices/">Measuring System Visual Latency through Cognitive Latency on Video See-Through AR devices</a></div>
         <div class="pub-venue">IEEE VR 2020</div>
-        <div class="pub-authors">Robert Gruen, Eyal Ofek, Anthony Steed, Ran Gal, Mike Sinclair, <b>Mar Gonzalez-Franco</b></div>
+        <div class="pub-authors">Robert Gruen, Eyal Ofek, Anthony Steed, Ran Gal, Mike Sinclair, <b>Mar Gonzalez-Franco</b></div><br/><br/>
       </div>
+	  </div>
 
 
       <div class="pub">
-        <div class="pub-title"><a href="https://cs.stanford.edu/people/karpathy/deepvideo/">The Self-Avatar Follower Effect in Virtual Reality</a></div>
+	  <div class="theory avatars perception">
+	  <div class="pico" > <img src="./MarGonzalez_files/pubimg/follower2020.jpg"/></div>
+        <div class="pub-title"><a href="https://www.microsoft.com/en-us/research/publication/the-self-avatar-follower-effect-in-virtual-reality/">The Self-Avatar Follower Effect in Virtual Reality</a></div>
         <div class="pub-venue">IEEE VR 2020</div>
-        <div class="pub-authors"><b>Mar Gonzalez-Franco</b>, Brian Cohn, Dalila Burin, Eyal Ofek, Antonella Maselli</div>
+        <div class="pub-authors"><b>Mar Gonzalez-Franco</b>, Brian Cohn, Dalila Burin, Eyal Ofek, Antonella Maselli</div><br/><br/>
       </div>
+	  </div>
+		<div class="pub">
+		<div class="haptics devices">
 
+		<div class="pico" > <img src="./MarGonzalez_files/pubimg/pivot2020.jpg"/></div>
+				<div class="pub-title"><a href="https://www.microsoft.com/en-us/research/publication/haptic-pivot-on-demand-handhelds-in-vr/">Haptic PIVOT: On-Demand Handhelds in VR</a></div>
+				<div class="pub-venue">ACM UIST 2020</div> <a href="./MarGonzalez_files/bibs/haptic-pivot-on-demand-handhelds-in-vr.bib" ><img src="./MarGonzalez_files/copy-regular.svg"  width="15" height="15"/></a>
+				<div class="pub-authors">Robert Kovacs, Eyal Ofek, Alexa Fay Siu, Sebastian Marwecki, Christian Holz, Mike Sinclair, <b>Mar Gonzalez-Franco</b></div> <br/><br/>
+				</div> 
+			</div>
+			
+			
+			
+2019
+
+		<div class="pub">
+
+		<div class="haptics devices">
+
+			<div class="pico" > <img src="./MarGonzalez_files/pubimg/capstan2019.jpg"/></div>
+				<div class="pub-title"><a href="https://www.microsoft.com/en-us/research/publication/capstancrunch-a-haptic-vr-controller-with-user-supplied-force-feedback/">CapstanCrunch: A Haptic VR Controller with User-supplied Force Feedback</a></div>
+				<div class="pub-venue">ACM UIST 2019</div> <a href="./MarGonzalez_files/bibs/capstancrunch-a-haptic-vr-controller-with-user-supplied-force-feedback.bib"><img src="./MarGonzalez_files/copy-regular.svg"  width="15" height="15"/></a> <img src="./MarGonzalez_files/award-solid.svg" width="15" height="15"/>
+				<div class="pub-authors">Mike Sinclair, Eyal Ofek, <b>Mar Gonzalez-Franco</b>, Christian Holz </div> 
+				<br/><br/>
+			</div>
+			</div> 
+			
+			<div class="pub">
+			
+			<div class="haptics devices">
+
+				<div class="pico" > <img src="./MarGonzalez_files/pubimg/torc2019.png"/></div>
+				<div class="pub-title"><a href="https://www.microsoft.com/en-us/research/publication/torc-a-virtual-reality-controller-for-in-hand-high-dexterity-finger-interaction-3/">TORC: A virtual reality controller for in-hand high-dexterity finger interaction</a></div>
+				<div class="pub-venue">ACM CHI 2019</div> <a href="./MarGonzalez_files/bibs/torc-a-virtual-reality-controller-for-in-hand-high-dexterity-finger-interaction-3.bib"><img src="./MarGonzalez_files/copy-regular.svg"  width="15" height="15"/></a>
+				<div class="pub-authors">Jaeyeon Lee, Mike Sinclair, <b>Mar Gonzalez-Franco</b>, Eyal Ofek, Christian Holz </div> 
+			<br/><br/>
+			 </div> 
+			</div>
       <div class="pub">
+	  <div class="interaction accessibility">
+	  <div class="pico" > <img src="./MarGonzalez_files/pubimg/miseunseen2019.jpg"/></div>
         <div class="pub-title"><a href="https://www.microsoft.com/en-us/research/publication/mise-unseen-using-eye-tracking-to-hide-virtual-reality-scene-changes-in-plain-sight/">Mise-Unseen: Using Eye-Tracking to Hide Virtual Reality Scene Changes in Plain Sight</a></div>
         <div class="pub-venue">UIST 2019</div>
-        <div class="pub-authors">Sebastian Marwecki, Andrew D. Wilson, Eyal Ofek, <b>Mar Gonzalez-Franco</b>, Christian Holz</div>
+        <div class="pub-authors">Sebastian Marwecki, Andrew D. Wilson, Eyal Ofek, <b>Mar Gonzalez-Franco</b>, Christian Holz</div><br/><br/>
       </div>
+	  </div>
 
       <div class="pub">
+	  <div class="accessibility">
+	  <div class="pico" > <img src="./MarGonzalez_files/pubimg/ismar-logo.png"/></div>
         <div class="pub-title"><a href="https://www.microsoft.com/en-us/research/publication/accessible-by-design-an-opportunity-for-virtual-reality/">Accessible by Design: An Opportunity for Virtual Reality</a></div>
         <div class="pub-venue">ISMAR 2019</div>
         <div class="pub-authors">Martez Mott, Ed Cutrell, <b>Mar Gonzalez-Franco</b>, Christian Holz, Eyal Ofek, Richard Stoakley, Meredith Ringel Morris</div>
+<br/><br/>
       </div>
-
+	  </div>
       <div class="pub">
+	  <div class="avatars haptics perception">
+	  <div class="pico" > <img src="./MarGonzalez_files/pubimg/hapticavatar2019.jpg"/></div>
         <div class="pub-title"><a href="https://www.microsoft.com/en-us/research/publication/avatar-embodiment-enhances-haptic-confidence-on-the-out-of-body-touch-illusion/">Avatar Embodiment Enhances Haptic Confidence on the Out-of-Body Touch Illusion</a></div>
         <div class="pub-venue">IEEE Transactions on Haptics 2019</div>
-        <div class="pub-authors"><b>Mar Gonzalez-Franco</b>, Christopher C Berger</div>
+        <div class="pub-authors"><b>Mar Gonzalez-Franco</b>, Christopher C Berger</div><br/><br/>
       </div>
+	  </div>
 
       <div class="pub">
+	  <div class="locomotion avatars">
+	  <div class="pico" > <img src="./MarGonzalez_files/pubimg/giant2019.png"/></div>
         <div class="pub-title"><a href="https://www.microsoft.com/en-us/research/publication/im-a-giant-walking-in-large-virtual-environments-at-high-speed-gains-2/">I’m a Giant: Walking in Large Virtual Environments at High Speed Gains</a></div>
         <div class="pub-venue">ACM CHI 2019</div>
-        <div class="pub-authors">Parastoo Abtahi, <b>Mar Gonzalez-Franco</b>, Eyal Ofek, Anthony Steed</div>
+        <div class="pub-authors">Parastoo Abtahi, <b>Mar Gonzalez-Franco</b>, Eyal Ofek, Anthony Steed</div><br/><br/>
       </div>
+	  </div>
 
       <div class="pub">
+	  <div class="locomotion avatars perception">
+	  <div class="pico" > <img src="./MarGonzalez_files/pubimg/compression2019.jpg"/></div>
         <div class="pub-title"><a href="https://www.microsoft.com/en-us/research/publication/individual-differences-on-embodied-distance-estimation-in-virtual-reality/">Individual Differences on Embodied Distance Estimation in Virtual Reality</a></div>
         <div class="pub-venue">IEEE VR 2019</div>
-        <div class="pub-authors"><b>Mar Gonzalez-Franco</b>, Parastoo Abtahi, Anthony Steed</div>
+        <div class="pub-authors"><b>Mar Gonzalez-Franco</b>, Parastoo Abtahi, Anthony Steed</div><br/><br/>	 
       </div>
-	  
+	  </div>
+ 
+2018
 	  <div class="pub">
+	  <div class="avatars">
+	  <div class="pico" > <img src="./MarGonzalez_files/pubimg/milgram2018.jpg"/></div>
         <div class="pub-title"><a href="https://www.microsoft.com/en-us/research/publication/participant-concerns-for-the-learner-in-a-virtual-reality-replication-of-the-milgram-obedience-study/">Participant concerns for the Learner in a Virtual Reality replication of the Milgram obedience study</a></div>
         <div class="pub-venue">PLoS ONE 2018</div>
-        <div class="pub-authors"><b>Mar Gonzalez-Franco</b>, Mel Slater, Megan E. Birney, David Swapp, S. Alexander Haslam, Stephen D. Reicher</div>
+        <div class="pub-authors"><b>Mar Gonzalez-Franco</b>, Mel Slater, Megan E. Birney, David Swapp, S. Alexander Haslam, Stephen D. Reicher</div><br/><br/>
       </div>
+	  </div>
 
 	  <div class="pub">
+	  <div class="haptics perception">
+	  <div class="pico" > <img src="./MarGonzalez_files/pubimg/outofbody2018.png"/></div>
         <div class="pub-title"><a href="https://www.microsoft.com/en-us/research/publication/expanding-the-sense-of-touch-outside-the-body/">Expanding the Sense of Touch Outside the Body</a></div>
         <div class="pub-venue">ACM Symposium on Applied Perception (SAP) 2018</div>
-        <div class="pub-authors"><b>Mar Gonzalez-Franco</b>, Christopher Berger</div>
+        <div class="pub-authors"><b>Mar Gonzalez-Franco</b>, Christopher Berger</div><br/><br/>	
       </div>
-	  
+	  </div>
+  
 	   <div class="pub">
+	   <div class="avatars opensource review">
+	   <div class="pico" > <img src="./MarGonzalez_files/pubimg/frontiers.png"/></div>
         <div class="pub-title"><a href="https://www.microsoft.com/en-us/research/publication/avatar-embodiment-towards-a-standardized-questionnaire/">Avatar Embodiment. Towards a Standardized Questionnaire.</a></div>
         <div class="pub-venue">Frontiers in Robotics and AI 2018</div>
-        <div class="pub-authors"><b>Mar Gonzalez-Franco</b>, Tabitha C Peck</div>
+        <div class="pub-authors"><b>Mar Gonzalez-Franco</b>, Tabitha C Peck</div><br/><br/>	  
       </div>
-	  
+	  </div>
+
 	  <div class="pub">
+	  <div class="theory haptics perception">
+		<div class="pico" > <img src="./MarGonzalez_files/pubimg/uncanny2018.gif"/></div>
         <div class="pub-title"><a href="https://www.microsoft.com/en-us/research/publication/uncanny-valley-haptics-2/">The uncanny valley of haptics</a></div>
         <div class="pub-venue">Science Robotics 2018</div>
-        <div class="pub-authors"><b>Mar Gonzalez-Franco</b>, Christopher C Berger, Eyal Ofek, Ken Hinckley</div>
+        <div class="pub-authors"><b>Mar Gonzalez-Franco</b>, Christopher C Berger, Eyal Ofek, Ken Hinckley</div><br/><br/>	 
       </div>
+	  </div>
 	  
 	  <div class="pub">
+		<div class="perception audio">
+	  <div class="pico" > <img src="./MarGonzalez_files/pubimg/hrtf2018.jpg"/></div>
+				<div class="pub-title"><a href="https://www.microsoft.com/en-us/research/publication/generic-hrtfs-may-good-enough-virtual-reality-improving-source-localization-cross-modal-plasticity/">Generic HRTFs may be good enough in Virtual Reality. Improving source localization through cross-modal plasticity</a></div>
+				<div class="pub-venue">Frontiers in Neuroscience 2018</div> <a href="./MarGonzalez_files/bibs/generic-hrtfs-may-good-enough-virtual-reality-improving-source-localization-cross-modal-plasticity.bib" ><img src="./MarGonzalez_files/copy-regular.svg"  width="15" height="15"/></a>
+				<div class="pub-authors">Christopher Berger, <b>Mar Gonzalez-Franco</b>, Ana Tajadura-Jimenez, Dinei Florencio, Zhengyou Zhang </div> <br/><br/>	 
+			</div>
+			</div>
+
+2017 
+
+			<div class="pub">
+			<div class="perception audio">
+			<div class="pico" > <img src="./MarGonzalez_files/pubimg/talking2017.jpg"/></div>
+				<div class="pub-title"><a href="https://www.microsoft.com/en-us/research/publication/concurrent-talking-immersive-virtual-reality-dominance-visual-speech-cues/">Concurrent talking in immersive virtual reality: on the dominance of visual speech cues</a></div>
+				<div class="pub-venue">Scientific Reports 2017</div> <a href="./MarGonzalez_files/bibs/concurrent-talking-immersive-virtual-reality-dominance-visual-speech-cues.bib"><img src="./MarGonzalez_files/copy-regular.svg"  width="15" height="15"/></a> 
+				<div class="pub-authors"><b>Mar Gonzalez-Franco</b>, Antonella Maselli, Dinei Florencio, Nikolai Smolyanskiy, Zhengyou Zhang </div> <br/><br/>	 
+				</div>
+			</div>
+	  <div class="pub">
+	  <div class="AR devices">
+	  <div class="pico" > <img src="./MarGonzalez_files/pubimg/cardiolens2017.jpg"/></div>
         <div class="pub-title"><a href="https://www.microsoft.com/en-us/research/publication/pulse-vital-sign-measurement-mixed-reality-using-hololens/">Pulse and Vital Sign Measurement in Mixed Reality using a HoloLens</a></div>
         <div class="pub-venue">ACM Symposium on Virtual Reality Software and Technology (VRST) 2017</div>
-        <div class="pub-authors">Daniel McDuff, Chrisophe Hurter, <b>Mar Gonzalez-Franco</b></div>
+        <div class="pub-authors">Daniel McDuff, Chrisophe Hurter, <b>Mar Gonzalez-Franco</b></div><br/><br/>	
       </div>
+	  </div>
+  
 	  <div class="pub">
+	  <div class="theory perception">
+	  <div class="pico" > <img src="./MarGonzalez_files/pubimg/model2017.jpg"/></div>
         <div class="pub-title"><a href="https://www.microsoft.com/en-us/research/publication/model-illusions-virtual-reality/">Model of Illusions and Virtual Reality</a></div>
         <div class="pub-venue">Frontiers in Psychology 2017</div>
-        <div class="pub-authors"><b>Mar Gonzalez-Franco</b>, Jaron Lanier</div>
+        <div class="pub-authors"><b>Mar Gonzalez-Franco</b>, Jaron Lanier</div><br/><br/>	
       </div>
-	  
+	  </div>
+  
 	  <div class="pub">
+	  <div class="interaction perception devices">
+	  <div class="pico" > <img src="./MarGonzalez_files/pubimg/drone2017.jpg"/></div>
         <div class="pub-title"><a href="https://www.microsoft.com/en-us/research/publication/stereoscopic-first-person-view-system-drone-navigation-2/">Stereoscopic First Person View System for Drone Navigation</a></div>
         <div class="pub-venue">Frontiers in Robotics and AI 2017</div>
-        <div class="pub-authors">Nikolai Smolyanskyi, <b>Mar Gonzalez-Franco</b></div>
+        <div class="pub-authors">Nikolai Smolyanskyi, <b>Mar Gonzalez-Franco</b></div><br/><br/>
       </div>
+	  </div>
 	  
 	  <div class="pub">
+	  <div class="interaction">
+	  <div class="pico" > <img src="./MarGonzalez_files/pubimg/menufacturing2017.jpg"/></div>
         <div class="pub-title"><a href="https://www.microsoft.com/en-us/research/publication/immersive-mixed-reality-training-complex-manufacturing-scenarios/">Immersive Mixed Reality for Manufacturing Training</a></div>
         <div class="pub-venue">Frontiers in Robotics and AI 2017</div>
-        <div class="pub-authors"><b>Mar Gonzalez-Franco</b>, Rodrigo Pizarro, Julio Cermeron, Katie Li, Jacob Thorn, Windo Hutabarat, Ashutosh Tiwari, Pablo Bermell</div>
+        <div class="pub-authors"><b>Mar Gonzalez-Franco</b>, Rodrigo Pizarro, Julio Cermeron, Katie Li, Jacob Thorn, Windo Hutabarat, Ashutosh Tiwari, Pablo Bermell</div><br/><br/>	
       </div>
-	  
+	  </div>
+  
+
 	  <div class="pub">
+	  <div class="interaction perception">
+	  <div class="pico" > <img src="./MarGonzalez_files/pubimg/paired.gif"/></div>
         <div class="pub-title"><a href="https://www.microsoft.com/en-us/research/publication/assessing-3d-scan-quality-paired-comparisons-psychophysics/">Assessing 3D Scan Quality in Virtual Reality Through Paired-comparisons Psychophysics</a></div>
-        <div class="pub-venue">ACM on Multimedia Conference 2019</div>
-        <div class="pub-authors">Jacob Thorn, Rodrigo Pizarro, Bernhard Spanlang, Pablo Bermell-Garcia, <b>Mar Gonzalez-Franco</b></div>
+        <div class="pub-venue">ACM on Multimedia Conference 2017</div>
+        <div class="pub-authors">Jacob Thorn, Rodrigo Pizarro, Bernhard Spanlang, Pablo Bermell-Garcia, <b>Mar Gonzalez-Franco</b></div><br/><br/>	
       </div>
-	  
+	  </div>
+
+2016  
 	  <div class="pub">
+	  <div class="avatars faces EEG">
+	  <div class="pico" > <img src="./MarGonzalez_files/pubimg/face2016.jpg"/></div>
         <div class="pub-title"><a href="https://www.microsoft.com/en-us/research/publication/neurological-traces-look-alike-avatars/">The neurological traces of look-alike avatars</a></div>
         <div class="pub-venue">Frontiers in Human Neuroscience 2016 </div>
-        <div class="pub-authors"><b>Mar Gonzalez-Franco</b>, Ana Bellido Rivas, Kristopher J Blom, Mel Slater, Antoni Rodriguez-Fornells</div>
+        <div class="pub-authors"><b>Mar Gonzalez-Franco</b>, Ana Bellido Rivas, Kristopher J Blom, Mel Slater, Antoni Rodriguez-Fornells</div><br/><br/>
       </div>
+	  </div>
 
 	  
 	   <div class="pub">
-        <div class="pub-title"><a href="https://www.microsoft.com/en-us/research/publication/neurological-traces-look-alike-avatars/">Violating body movement semantics: Neural signatures of self-generated and external-generated errors</a></div>
+	   <div class="avatars motorcontrol EEG">
+	   <div class="pico" > <img src="./MarGonzalez_files/pubimg/violation2016.jpg"/></div>
+        <div class="pub-title"><a href="https://www.microsoft.com/en-us/research/publication/violating-body-movement-semantics-neural-signatures-self-generated-external-generated-errors/">Violating body movement semantics: Neural signatures of self-generated and external-generated errors</a></div>
         <div class="pub-venue">NeuroImage 2016 </div>
-        <div class="pub-authors">Gonçalo Padrao ,<b>Mar Gonzalez-Franco</b>, Maria V Sanchez-Vives, Mel Slater, Antoni Rodriguez-Fornells</div>
+        <div class="pub-authors">Gonçalo Padrao ,<b>Mar Gonzalez-Franco</b>, Maria V Sanchez-Vives, Mel Slater, Antoni Rodriguez-Fornells</div><br/><br/>	 
       </div>
-	  
+	  </div>
+
+2015 
 	  <div class="pub">
-        <div class="pub-title"><a href="https://www.microsoft.com/en-us/research/publication/neurological-traces-look-alike-avatars/">Augmenting Remote Presence For Interactive Dashboard Collaborations</a></div>
+	  <div class="interaction">
+	  <div class="pico" > <img src="./MarGonzalez_files/pubimg/presence2013.jpg"/></div>
+        <div class="pub-title"><a href="https://www.microsoft.com/en-us/research/publication/augmenting-remote-presence-interactive-dashboard-collaborations/">Augmenting Remote Presence For Interactive Dashboard Collaborations</a></div>
         <div class="pub-venue">International Conference on Interactive Tabletops and Surfaces (ITS) 2015</div>
-        <div class="pub-authors">Rodrigo Pizarro, Mark Hall, Pablo Bermell-Garcia,<b>Mar Gonzalez-Franco</b></div>
+        <div class="pub-authors">Rodrigo Pizarro, Mark Hall, Pablo Bermell-Garcia,<b>Mar Gonzalez-Franco</b></div><br/><br/>  
       </div>
-	  
+	  </div>
+
 	   <div class="pub">
+	   <div class="interaction">
+	   <div class="pico" > <img src="./MarGonzalez_files/pubimg/remote2015.jpg"/></div>
         <div class="pub-title"><a href="https://www.microsoft.com/en-us/research/publication/framework-remote-collaborative-interaction-virtual-environments-based-proximity/">Framework for remote collaborative interaction in virtual environments based on proximity</a></div>
         <div class="pub-venue">3DUI 2015 </div>
-        <div class="pub-authors"><b>Mar Gonzalez-Franco</b>, Mark Hall, Devon Hansen, Karl Jones, Paul Hannah, Pablo Bermell-Garcia</div>
+        <div class="pub-authors"><b>Mar Gonzalez-Franco</b>, Mark Hall, Devon Hansen, Karl Jones, Paul Hannah, Pablo Bermell-Garcia</div><br/><br/>
       </div>
-	  
+	  </div>
+	 
+2014 
 	  <div class="pub">
-        <div class="pub-title"><a href="https://www.microsoft.com/en-us/research/publication/neurophysiological-signatures-body-representation-brain-using-immersive-virtual-reality/">Neurophysiological signatures of the body representation in the brain using Immersive Virtual Reality</a></div>
+	  <div class="theory EEG">
+	  <div class="pico" > <img src="./MarGonzalez_files/pubimg/thesis.jpg"/></div>
+        <div class="pub-title "><a href="https://www.microsoft.com/en-us/research/publication/neurophysiological-signatures-body-representation-brain-using-immersive-virtual-reality/">Neurophysiological signatures of the body representation in the brain using Immersive Virtual Reality</a></div>
         <div class="pub-venue">2014 </div>
-        <div class="pub-authors"><b>Mar Gonzalez-Franco</b></div>
+        <div class="pub-authors"><b>Mar Gonzalez-Franco</b></div><br/><br/>
       </div>
+	  </div>
+
+
 	  <div class="pub">
+	  <div class="avatars opensource">
+	  <div class="pico" > <img src="./MarGonzalez_files/pubimg/lab2014.jpg"/></div>
         <div class="pub-title"><a href="https://www.microsoft.com/en-us/research/publication/build-embodiment-lab-achieving-body-representation-illusions-virtual-reality/">How to build an embodiment lab: achieving body representation illusions in virtual reality</a></div>
         <div class="pub-venue">Frontiers in Robotics and AI 2014 </div>
-        <div class="pub-authors">Bernhard Spanlang , Jean-Marie Normand , David Borland , Konstantina Kilteni , Elias Giannopoulos, Ausiàs Pomés, <b>Mar Gonzalez-Franco</b>, Daniel Pérez Marcos, Jorge Arroyo-Palacios, Xavi Navaro Muncunill , Mel Slater</div>
+        <div class="pub-authors">Bernhard Spanlang , Jean-Marie Normand , David Borland , Konstantina Kilteni , Elias Giannopoulos, Ausiàs Pomés, <b>Mar Gonzalez-Franco</b>, Daniel Pérez Marcos, Jorge Arroyo-Palacios, Xavi Navaro Muncunill , Mel Slater</div><br/><br/>
       </div>
+	  </div>
+
 	  <div class="pub">
+	  <div class="interaction EEG">
+	  <div class="pico" > <img src="./MarGonzalez_files/pubimg/robot2014.jpg"/></div>
         <div class="pub-title"><a href="https://www.microsoft.com/en-us/research/publication/comparison-of-ssvep-bci-and-eye-tracking-for-controlling-a-humanoid-robot-in-a-social-environment/">Comparison of SSVEP BCI and eye tracking for controlling a humanoid robot in a social environment</a></div>
         <div class="pub-venue">MIT PRESENCE: Teleoperators and Virtual Environments 2014</div>
-        <div class="pub-authors">Sameer Kishore, <b>Mar Gonzalez-Franco</b>, , Christoph Hintemüller, Christoph Kapeller, Christoph Guger, Mel Slater, Kristopher J Blom</div>
+        <div class="pub-authors">Sameer Kishore, <b>Mar Gonzalez-Franco</b>, , Christoph Hintemüller, Christoph Kapeller, Christoph Guger, Mel Slater, Kristopher J Blom</div><br/><br/>	 
       </div>
+	  </div>
+ 
 	  <div class="pub">
+	  <div class="perception">
+	  <div class="pico" > <img src="./MarGonzalez_files/pubimg/eyegaze2014.jpg"/></div>
         <div class="pub-title"><a href="https://www.microsoft.com/en-us/research/publication/non-linear-modeling-eye-gaze-perception-function-gaze-head-direction/">Non-linear modeling of eye gaze perception as a function of gaze and head direction</a></div>
         <div class="pub-venue">Quality of Multimedia Experience (QoMEX) 2014 </div>
-        <div class="pub-authors"><b>Mar Gonzalez-Franco</b>, Philip A Chou</div>
+        <div class="pub-authors"><b>Mar Gonzalez-Franco</b>, Philip A Chou</div><br/><br/>	
       </div>
+	  </div>
+  
 	  <div class="pub">
+	  <div class="avatars perception EEG">
+	  <div class="pico" > <img src="./MarGonzalez_files/pubimg/handknife2014.jpg"/></div>
         <div class="pub-title"><a href="https://www.microsoft.com/en-us/research/publication/a-threat-to-a-virtual-hand-elicits-motor-cortex-activation-3/">A threat to a virtual hand elicits motor cortex activation</a></div>
         <div class="pub-venue">Experimental Brain Research 2014 </div>
-        <div class="pub-authors"><b>Mar Gonzalez-Franco</b>,  Tabitha C. Peck , Antoni Rodríguez-Fornells, Mel Slater</div>
+        <div class="pub-authors"><b>Mar Gonzalez-Franco</b>,  Tabitha C. Peck , Antoni Rodríguez-Fornells, Mel Slater</div><br/><br/>	
       </div>
-	  
+	  </div>
+
+2013  
 	  <div class="pub">
+	  <div class="avatars">
+	  <div class="pico" > <img src="./MarGonzalez_files/pubimg/pain2014.jpg"/></div>
         <div class="pub-title"><a href="https://www.microsoft.com/en-us/research/publication/virtual-reality-assessment-patients-suffering-chronic-pain-case-study/">Virtual reality for assessment of patients suffering chronic pain: a case study</a></div>
         <div class="pub-venue">Experimental Brain Research 2013 </div>
-        <div class="pub-authors">Joan Llobera,<b>Mar Gonzalez-Franco</b>, Daniel Perez-Marcos, Josep Valls-Sole, Mel Slater, Maria V Sanchez-Vives</div>
+        <div class="pub-authors">Joan Llobera,<b>Mar Gonzalez-Franco</b>, Daniel Perez-Marcos, Josep Valls-Sole, Mel Slater, Maria V Sanchez-Vives</div><br/><br/>
       </div>
-	  
+	  </div>
+	
+2011  
 	  <div class="pub">
+	  <div class="EEG motorcontrol">
+	  <div class="pico" > <img src="./MarGonzalez_files/pubimg/bci.jpg"/></div>
         <div class="pub-title"><a href="https://www.microsoft.com/en-us/research/publication/motor-imagery-based-brain-computer-interface-a-study-of-the-effect-of-positive-and-negative-feedback-2/">Motor imagery based brain-computer interface: a study of the effect of positive and negative feedback</a></div>
         <div class="pub-venue">IEEE Engineering in Medicine and Biology Society (EMBS) 2011 </div>
-        <div class="pub-authors"><b>Mar Gonzalez-Franco</b>, Peng Yuan, Dan Zhang, Bo Hong, Shangkai Gao</div>
+        <div class="pub-authors"><b>Mar Gonzalez-Franco</b>, Peng Yuan, Dan Zhang, Bo Hong, Shangkai Gao</div><br/><br/>	 
       </div>
+	  </div>
+
+2010 
 	  <div class="pub">
+	  <div class="motorcontrol avatars">
+	  <div class="pico" > <img src="./MarGonzalez_files/pubimg/mirror2010.jpg"/></div>
         <div class="pub-title"><a href="https://www.microsoft.com/en-us/research/publication/the-contribution-of-real-time-mirror-reflections-of-motor-actions-on-virtual-body-ownership-in-an-immersive-virtual-environment-2/">The contribution of real-time mirror reflections of motor actions on virtual body ownership in an immersive virtual environment</a></div>
         <div class="pub-venue">IEEE VR 2010 </div>
-        <div class="pub-authors"><b>Mar Gonzalez-Franco</b>, Daniel Perez-Marcos, Bernhard Spanlang, Mel Slater</div>
-      </div>
-	
+        <div class="pub-authors"><b>Mar Gonzalez-Franco</b>, Daniel Perez-Marcos, Bernhard Spanlang, Mel Slater</div><br/><br/>	
 	  
+      </div>
+	  </div>
+
       <div>
         <br>
         Also on <a href="https://scholar.google.com/citations?user=fqhP7dcAAAAJ&hl=en">Google Scholar</a>
       </div>
     </div>
 </div>
+
+
 	<div class="project" style="background-color: #eee;">
 	<div class="container" >
 	 <div class="ctitle">awards</div>
@@ -646,7 +909,9 @@
 		  <br/>
 		  
 		  <strong>2021</strong><br/>
-
+			Swansea University, Invited Lecture, April 21st<br/>
+			Eventlab, Universitat de Barcelona, Invited Lecture, April 20th<br/>
+			Snap Inc Research, Invited Speaker, March 30th<br/>
 			<a href="https://www.socialvr-ws.com/">SocialVR</a>, CHI Workshop Keynote, May 7th, 2021 <br/>
 			Berripills, <a href="https://www.biocrucesbizkaia.org/">BioCruzes</a> Hospital, Bilbao, Spain, March 17h, 2021<br/>
 			<a href="https://online.sxsw.com/event/sxsw-online/planning/UGxhbm5pbmdfMzM1NTAy">SXSW</a>, Panelist, Avatars in Virtual Reality, Austin, TX, March 16th, 2021<br/>
