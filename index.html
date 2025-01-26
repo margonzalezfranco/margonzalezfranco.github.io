@@ -1,7 +1,12 @@
 <!DOCTYPE html>
-<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<html lang="en">
+<head>
+	
 
-  
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+
+	
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -38,12 +43,12 @@ function FilterFunction(filter) {
 		if( p.classList.contains(filter) || filter=='')
 		{
 			//console.log(p);
-			p.style.display = "";
-			p.style.height = "80px";
+			p.parentNode.style.display = "";
+			p.parentNode.style.height = "150px";
 		}else {
-			p.style.display = "none";
+			p.parentNode.style.display = "none";
 			//p.children[2].style.height = "0px";
-			p.style.height = "0px";
+			p.parentNode.style.height = "0px";
 		}
 	}
 		
@@ -66,7 +71,7 @@ function FilterFunction(filter) {
             <a target="_blank" href="https://scholar.google.com/citations?user=fqhP7dcAAAAJ" target="_blank"><img src="./MarGonzalez_files/google-scholar.svg" class="iico"/></a>
 			<a target="_blank" href="https://drive.google.com/file/d/1AAi26B9zUnYwi4niEpEZMmqilS2g640R/view?usp=sharing" target="_blank"><img src="./MarGonzalez_files/resume.svg" class="iico"/></a>
             <img src="./MarGonzalez_files/envelope-solid.svg" style="cursor: pointer;" class="iico" id="iemail" title="click to reveal"/>
-			<a target="_blank" href="https://twitter.com/twi_mar" target="_blank"><img src="./MarGonzalez_files/twitter-brands.svg" class="iico"/></a>
+			<!--<a target="_blank" href="https://twitter.com/twi_mar" target="_blank"><img src="./MarGonzalez_files/twitter-brands.svg" class="iico"/></a>-->
            
           </div>
           <div id="demail"></div> <!-- will reveal email -->
@@ -481,7 +486,10 @@ We explore multi-device and multi-modal futures with a focus on AI/ML enabled no
 	<div class="project" style="background-color: #fff;">
     <div class="container" id="fullpublications">
 		
+	
       <div class="ctitle" onclick="FilterFunction('')" style="cursor: pointer;"> full list of publications</div>
+	  <div class="pico" ><b>FILTERS:</b></div>
+	  <div class="pico" onclick="FilterFunction('ML')" style="cursor: pointer;">AI/ML</div>
 	  <div class="pico"  onclick="FilterFunction('interaction')" style="cursor: pointer;">interaction</div>
 	  <div class="pico"  onclick="FilterFunction('perception')" style="cursor: pointer;">perception</div>
 	  <div class="pico" onclick="FilterFunction('avatars')" style="cursor: pointer;">avatars</div>
@@ -497,8 +505,8 @@ We explore multi-device and multi-modal futures with a focus on AI/ML enabled no
 	  <div class="pico" onclick="FilterFunction('theory')" style="cursor: pointer;">theory</div>
 	  <div class="pico"  onclick="FilterFunction('latency')" style="cursor: pointer;">latency</div>
 	  <div class="pico"  onclick="FilterFunction('EEG')" style="cursor: pointer;">EEG</div>
-	  <div class="pico" onclick="FilterFunction('opensource')" style="cursor: pointer;">open source</div>
-	  <div class="pico" onclick="FilterFunction('ML')" style="cursor: pointer;">ML/AI</div>
+	  <div class="pico" onclick="FilterFunction('opensource')" style="cursor: pointer;">open source</div> 
+	  <div class="pico" onclick="FilterFunction('')" style="cursor: pointer;"><b>(show all)</b></div>
 <br/><br/>
 <br/><br/>
 	    
@@ -525,7 +533,7 @@ We explore multi-device and multi-modal futures with a focus on AI/ML enabled no
 2024
 
 <div class="pub">
-	<div class="ML">
+	<div class="interaction ML">
 	<div class="pico"> <img  src="./MarGonzalez_files/pubimg/guidelines.png"/></div>
 			<div class="pub-title">Guidelines for Productivity in Virtual Reality</div>
 			<div class="pub-venue">ACM Interactions</div> 
@@ -535,7 +543,7 @@ We explore multi-device and multi-modal futures with a focus on AI/ML enabled no
 </div></div>
 
 <div class="pub">
-	<div class="ML">
+	<div class="interaction">
 	<div class="pico"> <img  src="./MarGonzalez_files/pubimg/uist24_hands.jpg"/></div>
 			<div class="pub-title">Hands-on, Hands-off: Gaze-Assisted Bimanual 3D Interaction</div>
 			<div class="pub-venue">UIST 2024</div> 
@@ -627,7 +635,7 @@ We explore multi-device and multi-modal futures with a focus on AI/ML enabled no
 
 	<div class="pub">
 		<div class="ML">
-		<div class="pico"> <img  src="./MarGonzalez_files/pubimg/chiea.jpg"/></div>
+		<div class="pico"> <img  src="./MarGonzalez_files/pubimg/co-locatedgames.JPG"/></div>
 				<div class="pub-title">Virtual Games, Real Interactions: A Look at Cross-reality Asymmetrical Co-located Social Games
 					</div>
 				<div class="pub-venue">CHI LBW 2024</div> 
@@ -639,7 +647,7 @@ We explore multi-device and multi-modal futures with a focus on AI/ML enabled no
 
 	<div class="pub">
 		<div class="ML">
-		<div class="pico"> <img  src="./MarGonzalez_files/pubimg/chiea24-290-fig1.jpg"/></div>
+		<div class="pico"> <img  src="./MarGonzalez_files/pubimg/intent.png"/></div>
 				<div class="pub-title">Intent-driven input device arbitration for XR
 					</div>
 				<div class="pub-venue">CHI LBW 2024</div> 
@@ -664,7 +672,7 @@ We explore multi-device and multi-modal futures with a focus on AI/ML enabled no
 	</div></div>
 	<div class="pub">
 		<div class="ML">
-		<div class="pico"> <img  src="./MarGonzalez_files/pubimg/image_0.gif"/></div>
+		<div class="pico"> <img  src="./MarGonzalez_files/pubimg/image_1.gif"  height="150"/></div>
 				<div class="pub-title">	WindowMirror: An Open-Source Toolkit to Bring Interactive Multi-Window Views into XR</div>
 				<div class="pub-venue">IEEE VR 2024 - ANIVAE</div> 
 				<div class="pub-authors">Riccardo Bovo, Eric J. Gonzalez, Li-Te Cheng,<b>Mar Gonzalez-Franco</b></div> 
@@ -692,7 +700,7 @@ We explore multi-device and multi-modal futures with a focus on AI/ML enabled no
 
 <div class="pub">
 	<div class="avatars motorcontrol">
-	<div class="pico" > <img src="./MarGonzalez_files/pubimg/redirection.PNG"/></div>
+	<div class="pico" > <img src="./MarGonzalez_files/pubimg/redirection.PNG" height="150"/></div>
 			<div class="pub-title"><a target="_blank" href="https://royalsocietypublishing.org/doi/abs/10.1098/rstb.2021.0453"> Enhanced efficiency in visually guided online motor control for actions redirected towards the body midline</a></div>
 			<div class="pub-venue">Philosophical Transactions of the Royal Society B</div> 
 			<div class="pub-authors">Antonella Maselli, Eyal Ofek, Brian Cohn, Ken Hinckley, <b>Mar Gonzalez-Franco</b></div> <br/><br/>
@@ -709,7 +717,7 @@ We explore multi-device and multi-modal futures with a focus on AI/ML enabled no
 
 <div class="pub">
 	<div class="avatars">
-	<div class="pico"> <img  src="./MarGonzalez_files/pubimg/valid.PNG"/></div>
+	<div class="pico"> <img  src="./MarGonzalez_files/pubimg/valid.PNG" height="150"/></div>
 			<div class="pub-title"><a target="_blank" href="https://arxiv.org/abs/2309.10902"> VALID: A perceptually validated Virtual Avatar Library for Inclusion and Diversity</a></div>
 			<div class="pub-venue">Frontiers in VR</div> 
 			<div class="pub-authors">Tiffany Do, Steve Zelenty, <b>Mar Gonzalez-Franco</b>,  Ryan P McMahan</div> <br/><br/>
@@ -771,7 +779,7 @@ We explore multi-device and multi-modal futures with a focus on AI/ML enabled no
 
 <div class="pub">
 		<div class="avatars">
-		<div class="pico" > <img src="./MarGonzalez_files/pubimg/alltogether.PNG"/></div>
+		<div class="pico" > <img src="./MarGonzalez_files/pubimg/alltogether.PNG" height="150"/></div>
 				<div class="pub-title"><a target="_blank" href="https://dl.acm.org/doi/abs/10.1145/3533406.3539658">AllTogether: Effect of Avatars in Mixed-Modality Conferencing Environments</a></div>
 				<div class="pub-venue">CHIWORK 2022</div> 
 				<div class="pub-authors">Payod Panda, Molly Jane Nicholas, <b>Mar Gonzalez-Franco</b>, Kori Inkpen, Eyal Ofek, Ross Cutler, Ken Hinckley, Jaron Lanier</div> <br/><br/>
@@ -809,7 +817,7 @@ We explore multi-device and multi-modal futures with a focus on AI/ML enabled no
 
 <div class="pub">
 		<div class="haptics">
-		<div class="pico" > <img src="./MarGonzalez_files/pubimg/xrings.jpg"/></div>
+		<div class="pico" > <img src="./MarGonzalez_files/pubimg/xrings.png"/></div>
 				<div class="pub-title"><a target="_blank" href="https://www.microsoft.com/en-us/research/publication/x-rings-a-hand-mounted-360-degree-shape-display-for-grasping-in-virtual-reality/"> X-Rings: A Hand-mounted 360 Degree Shape Display for Grasping in Virtual Reality</a></div>
 				<div class="pub-venue">ACM UIST 2021</div> 
 				<div class="pub-authors">Eric J Gonzalez, Eyal Ofek,<b>Mar Gonzalez-Franco</b>, Mike Sinclair</div> <br/><br/>
@@ -1002,7 +1010,7 @@ Karan Ahuja, Eyal Ofek,<b>Mar Gonzalez-Franco</b>, Christian Holz, Andy Wilson <
 	  </div>
       <div class="pub">
 	  <div class="avatars haptics perception">
-	  <div class="pico" > <img src="./MarGonzalez_files/pubimg/hapticavatar2019.jpg"/></div>
+	  <div class="pico" > <img src="./MarGonzalez_files/pubimg/hapticavatar2019.jpg" height="150"/></div>
         <div class="pub-title"><a target="_blank" href="https://www.microsoft.com/en-us/research/publication/avatar-embodiment-enhances-haptic-confidence-on-the-out-of-body-touch-illusion/">Avatar Embodiment Enhances Haptic Confidence on the Out-of-Body Touch Illusion</a></div>
         <div class="pub-venue">IEEE Transactions on Haptics 2019</div>
         <div class="pub-authors"><b>Mar Gonzalez-Franco</b>, Christopher C Berger</div><br/><br/>

@@ -208,15 +208,23 @@ hr {
     clear: both;
 }
 .pico img {
-    height: 80px;
+    width:200px;
     border-radius: 5px;
     border: 1px solid #999;
+    transition: transform 0.3s ease; /* Smooth transition effect */
 }
+
+		
+.pico img:hover {
+        transform: scale(2); /* Increase size by 2x */
+    }
+    
 .pub {
     font-size: 14px;
     border-left: 4px solid #aaa;
     padding: 2px 0px 2px 10px;
     margin-bottom: 10px;
+    height:150px;
 }
 .pub-title {
     display: inline;
