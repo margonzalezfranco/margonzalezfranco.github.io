@@ -207,8 +207,20 @@ hr {
 .pend {
     clear: both;
 }
+
+.filter {
+    width:auto;
+    border-radius: 5px;
+    border: 1px solid #999;
+    background-color: rgb(242, 241, 241); 
+    float: left;
+    margin-right: 10px;
+
+
+}
 .pico img {
     width:200px;
+    object-fit: contain;
     border-radius: 5px;
     border: 1px solid #999;
     transition: transform 0.3s ease; /* Smooth transition effect */
