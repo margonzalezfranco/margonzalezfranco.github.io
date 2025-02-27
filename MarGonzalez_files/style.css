@@ -236,7 +236,7 @@ hr {
     border-left: 4px solid #aaa;
     padding: 2px 0px 2px 10px;
     margin-bottom: 10px;
-    height:150px;
+    height: fit-content;
 }
 .pub-title {
     display: inline;
